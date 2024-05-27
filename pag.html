@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tienda en linea</title>
+  <link rel="stylesheet" type="text/css" href="style4.css">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="shortcut icon" href="images/guaca.png">
+</head>
+
+<body style="background-color: #eeffcd;">
+  <div class="services-content container">
+    <div class="menu container">
+      <input type="checkbox" id="menu" />
+
+      <label for="menu">
+        <img src="images/menu.png" class="menu-icono" alt="">
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="Servicios.html">COMBOS</a></li>
+          <li><a href="Productos.html">PRODUCTOS</a></li>
+          <li><a href="redes.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <br><br><br>
+  <div class="productos">
+    <h2>PRODUCTOS</h2>
+    <div class="producto">
+        <h3>TORTA MEXICANA</h3>
+        <p>Precio: $3.50</p>
+        <label for="tipo">Tipo:</label>
+        <select id="tipo">
+            <option value="RES">RES</option>
+            <option value="POLLO">POLLO</option>
+            <option value="MIXTA">MIXTA</option>
+        </select>
+        <button onclick="agregarAlCarrito('TORTA', 3.50, document.getElementById('tipo').value)" class="btn-3">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <h3>BURRITO</h3>
+      <p>Precio: $3.50</p>
+      <label for="tipo2">Tipo:</label>
+      <select id="tipo2">
+          <option value="RES">RES</option>
+          <option value="POLLO">POLLO</option>
+          <option value="MIXTO">MIXTO</option>
+      </select>
+      <button onclick="agregarAlCarrito('BURRITO', 3.50, document.getElementById('tipo2').value)" class="btn-3">Agregar al carrito</button>
+  </div>
+  <div class="producto">
+    <h3>TACOS + NACHOS</h3>
+    <p>Precio: $4.50</p>
+    <label for="tipo3">Tipo:</label>
+    <select id="tipo3">
+        <option value="RES + NACHOS">RES</option>
+        <option value="POLLO + NACHOS">POLLO</option>
+        <option value="MIXTOS + NACHOS">MIXTOS</option>
+    </select>
+    <button onclick="agregarAlCarrito('TACOS', 4.50, document.getElementById('tipo3').value)" class="btn-3">Agregar al carrito</button>
+</div>
+<div class="producto">
+  <h3>QUESADILLAS</h3>
+  <p>Precio: $3.50</p>
+  <label for="tipo4">Tipo:</label>
+  <select id="tipo4">
+      <option value="RES">RES</option>
+      <option value="POLLO">POLLO</option>
+      <option value="MIXTOS">MIXTOS</option>
+  </select>
+  <button onclick="agregarAlCarrito('QUESADILLAS', 3.50, document.getElementById('tipo4').value)" class="btn-3">Agregar al carrito</button>
+</div>
+    <h2>EXTRAS</h2>
+    <div class="producto">
+      <h3>NACHOS</h3>
+      <p>Precio: $0.50</p>
+      <label for="tipo5">Tipo:</label>
+      <select id="tipo5">
+          <option value="- EXTRA">EXTRA</option>
+      </select>
+      <button onclick="agregarAlCarrito('NACHOS', 0.50, document.getElementById('tipo5').value)" class="btn-3">Agregar al carrito</button>    </div>
+  </div>
+  <div class="imagen-estatica">
+    <img src="images/guaca.png" alt="Imagen estática">
+  </div>
+  <div class="carrito">
+    <h2>CARRITO</h2>
+    <ul id="lista-carrito">
+
+    </ul>
+    <p id="total-carrito">Total: $0.00</p>
+    <button onclick="mostrarResumen()">Realizar pedido</button>
+    <!-- Agrega este botón en la sección del carrito -->
+    <button onclick="reiniciarCarrito()">Reiniciar carrito</button>
+  </div>
+
+  <script src="script3.js"></script>
+
+</body>
+</html>
+
